@@ -25,7 +25,7 @@ class TaskAdapter(
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         holder.tvTaskText.text = tasks[position]
-        holder.btnDelete.setOnClickListener { onDelete(holder.adapterPosition) }
+        holder.btnDelete.setOnClickListener { onDelete(holder.bindingAdapterPosition) }
     }
 
     override fun getItemCount(): Int = tasks.size
